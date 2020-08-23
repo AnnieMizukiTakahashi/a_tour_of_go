@@ -10,11 +10,20 @@ import "fmt"
 // 	fmt.Println(add(42, 13))
 // }
 
-func swap(x, y string) (string, string) {
-	return y, x
+// func swap(x, y string) (string, string) {
+// 	return y, x
+// }
+
+// func main() {
+// 	a, b := swap("hello", "world")
+// 	fmt.Println(a, b)
+// }
+func splint(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
 }
 
 func main() {
-	a, b := swap("hello", "world")
-	fmt.Println(a, b)
+	fmt.Println(splint(17))
 }
