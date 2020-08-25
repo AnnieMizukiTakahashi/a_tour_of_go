@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	// "math/cmplx"
+	"reflect"
 )
 
 // func add(x, y int) int {
@@ -68,10 +69,21 @@ import (
 // }
 
 // 初期値がないと勝手に0が入る
+// func main() {
+// 	var i int
+// 	var f float64
+// 	var b bool
+// 	var s string
+// 	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+// }
+
+// 型は変えられる 型(変数)
 func main() {
-	var i int
-	var f float64
-	var b bool
-	var s string
-	fmt.Printf("%v %v %v %q\n", i, f, b, s)
+	var i int = 42
+	var f float64 = float64(i)
+	var u uint = uint(f)
+	fmt.Println(i, f, u)
+	fmt.Println(reflect.TypeOf(i)) //int
+	fmt.Println(reflect.TypeOf(f)) //float64
+	fmt.Println(reflect.TypeOf(u)) //uint
 }
