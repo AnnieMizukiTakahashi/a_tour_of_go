@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	// "math/cmplx"
-	"reflect"
 )
 
 // func add(x, y int) int {
@@ -78,12 +76,21 @@ import (
 // }
 
 // 型は変えられる 型(変数)
+// func main() {
+// 	var i int = 42
+// 	var f float64 = float64(i)
+// 	var u uint = uint(f)
+// 	fmt.Println(i, f, u)
+// 	fmt.Println(reflect.TypeOf(i)) //int
+// 	fmt.Println(reflect.TypeOf(f)) //float64
+// 	fmt.Println(reflect.TypeOf(u)) //uint
+// }
+
+// For
 func main() {
-	var i int = 42
-	var f float64 = float64(i)
-	var u uint = uint(f)
-	fmt.Println(i, f, u)
-	fmt.Println(reflect.TypeOf(i)) //int
-	fmt.Println(reflect.TypeOf(f)) //float64
-	fmt.Println(reflect.TypeOf(u)) //uint
+	sum := 0
+	for i := 0; i < 10; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
 }
