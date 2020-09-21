@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 // func add(x, y int) int {
@@ -86,11 +87,41 @@ import (
 // 	fmt.Println(reflect.TypeOf(u)) //uint
 // }
 
-// For
-func main() {
-	sum := 0
-	for i := 0; i < 10; i++ {
-		sum += i
+// For文の書き方
+// func main() {
+// 	sum := 0
+// 	for i := 0; i < 10; i++ {
+// 		sum += i
+// 	}
+// 	fmt.Println(sum)
+// }
+
+// Forのイテレーションの初期値と後処理文は書かなくてもいい
+// func main() {
+// 	sum := 1
+// 	for sum < 1000 {
+// 		sum += sum
+// 	}
+// 	fmt.Println(sum)
+// }
+
+// ; セミコロンは省略できる。goではwhileをforで書く
+// func main() {
+// 	sum := 1
+// 	for sum < 1000 {
+// 		sum += sum
+// 	}
+// 	fmt.Println(sum)
+// }
+
+// if文
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
 	}
-	fmt.Println(sum)
+	return fmt.Sprint(math.Sqrt(x))
+}
+
+func main() {
+	fmt.Println(sqrt(2), sqrt(-5))
 }
