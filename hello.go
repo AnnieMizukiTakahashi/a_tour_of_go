@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"runtime"
+	"time"
 )
 
 // func add(x, y int) int {
@@ -143,14 +143,30 @@ import (
 // }
 
 //使ってるosを取得できる(!)
+// func main() {
+// 	fmt.Print("Go run on ")
+// 	switch os := runtime.GOOS; os {
+// 	case "darwin":
+// 		fmt.Println("OS X")
+// 	case "linux":
+// 		fmt.Println("Linux")
+// 	default:
+// 		fmt.Printf("%s.\n", os)
+// 	}
+// }
+
+// case に式を書く時
 func main() {
-	fmt.Print("Go run on ")
-	switch os := runtime.GOOS; os {
-	case "darwin":
-		fmt.Println("OS X")
-	case "linux":
-		fmt.Println("Linux")
+	fmt.Println("土曜日はいつ？")
+	today := time.Now().Weekday()
+	switch time.Saturday {
+	case today + 0:
+		fmt.Println("今日")
+	case today + 1:
+		fmt.Println("昨日")
+	case today + 2:
+		fmt.Println("in two days")
 	default:
-		fmt.Printf("%s.\n", os)
+		fmt.Println("too far away")
 	}
 }
