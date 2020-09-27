@@ -156,17 +156,31 @@ import (
 // }
 
 // case に式を書く時
+// func main() {
+// 	fmt.Println("土曜日はいつ？")
+// 	today := time.Now().Weekday()
+// 	switch time.Saturday {
+// 	case today + 0:
+// 		fmt.Println("今日")
+// 	case today + 1:
+// 		fmt.Println("昨日")
+// 	case today + 2:
+// 		fmt.Println("in two days")
+// 	default:
+// 		fmt.Println("too far away")
+// 	}
+// }
+
+// swichに何もconditionを入れないと、switch trueと同じ意味になる。
+// この構文だと、if then else文を短く書けるメリットがある。
 func main() {
-	fmt.Println("土曜日はいつ？")
-	today := time.Now().Weekday()
-	switch time.Saturday {
-	case today + 0:
-		fmt.Println("今日")
-	case today + 1:
-		fmt.Println("昨日")
-	case today + 2:
-		fmt.Println("in two days")
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon")
 	default:
-		fmt.Println("too far away")
+		fmt.Println("Good evening.")
 	}
 }
