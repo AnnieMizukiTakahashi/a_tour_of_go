@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"time"
+	// "time"
 )
 
 // func add(x, y int) int {
@@ -173,14 +173,19 @@ import (
 
 // swichに何もconditionを入れないと、switch trueと同じ意味になる。
 // この構文だと、if then else文を短く書けるメリットがある。
+// func main() {
+// 	t := time.Now()
+// 	switch {
+// 	case t.Hour() < 12:
+// 		fmt.Println("Good morning")
+// 	case t.Hour() < 17:
+// 		fmt.Println("Good afternoon")
+// 	default:
+// 		fmt.Println("Good evening.")
+// 	}
+// }
+
 func main() {
-	t := time.Now()
-	switch {
-	case t.Hour() < 12:
-		fmt.Println("Good morning")
-	case t.Hour() < 17:
-		fmt.Println("Good afternoon")
-	default:
-		fmt.Println("Good evening.")
-	}
+	defer fmt.Println("world")
+	fmt.Println("hello")
 }
