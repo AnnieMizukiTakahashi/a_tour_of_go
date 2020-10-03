@@ -185,7 +185,17 @@ import (
 // 	}
 // }
 
+// func main() {
+// 	defer fmt.Println("world")
+// 	fmt.Println("hello")
+// }
+
+// deferへ渡した関数が複数の処理(forみたいに)するとき、lastから実行される
 func main() {
-	defer fmt.Println("world")
-	fmt.Println("hello")
+	fmt.Println("counting")
+
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+	fmt.Println("done")
 }
