@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"math"
+	// "math"
 	// "time"
 )
 
@@ -229,16 +229,29 @@ import (
 // 	fmt.Println(Abs(v))
 // }
 
-type MyFloat float64
+// type MyFloat float64
 
-func (f MyFloat) Abs() float64 {
-	if f < 0 {
-		return float64(-f)
-	}
-	return float64(f)
-}
+// func (f MyFloat) Abs() float64 {
+// 	if f < 0 {
+// 		return float64(-f)
+// 	}
+// 	return float64(f)
+// }
+
+// func main() {
+// 	f := MyFloat(-math.Sqrt2)
+// 	fmt.Println(f.Abs())
+// }
 
 func main() {
-	f := MyFloat(-math.Sqrt2)
-	fmt.Println(f.Abs())
+	i, j := 42, 2701
+
+	p := &i         // point to i
+	fmt.Println(*p) // read i through the pointer
+	*p = 21         // set i through the pointer
+	fmt.Println(i)  // see the new value of i
+
+	p = &j         // point to j
+	*p = *p / 37   // divide j through the pointer
+	fmt.Println(j) // see the new value of j
 }
