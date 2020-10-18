@@ -243,17 +243,18 @@ import (
 // 	fmt.Println(f.Abs())
 // }
 
+// Goでのポインタの使い方
 // func main() {
 // 	i, j := 42, 2701
 
-// 	p := &i         // point to i
-// 	fmt.Println(*p) // read i through the pointer
-// 	*p = 21         // set i through the pointer
-// 	fmt.Println(i)  // see the new value of i
+// 	p := &i         // iをポインタとしてpに代入
+// 	fmt.Println(*p) // iをポインタ(p)を通して呼び出している //42
+// 	*p = 21         // iにポインタを通して21を代入する
+// 	fmt.Println(i)  // もう一度iを出力 //21
 
-// 	p = &j         // point to j
-// 	*p = *p / 37   // divide j through the pointer
-// 	fmt.Println(j) // see the new value of j
+// 	p = &j         // jの値をポインタに代入
+// 	*p = *p / 37   // ポインタを通してjを割る
+// 	fmt.Println(j) // jをp経由で出力 //73
 // }
 
 type Vertex struct {
