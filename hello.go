@@ -1,10 +1,9 @@
 package main
 
-import (
-	"fmt"
-	// "math"
-	// "time"
-)
+import "fmt"
+
+// "math"
+// "time"
 
 // func add(x, y int) int {
 // 	return x + y
@@ -257,11 +256,22 @@ import (
 // 	fmt.Println(j) // jをp経由で出力 //73
 // }
 
+// type Vertex struct {
+// 	X int
+// 	Y int
+// }
+
+// func main() {
+// 	fmt.Println(Vertex{1, 2})
+// }
+
 type Vertex struct {
 	X int
 	Y int
 }
 
 func main() {
-	fmt.Println(Vertex{1, 2})
+	v := Vertex{1, 2}
+	v.X = 4
+	fmt.Println(v.X)
 }
